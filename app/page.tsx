@@ -170,12 +170,13 @@ export default function MobileAppLanding() {
 
             {/* Footer */}
             <footer className="bg-black/40 py-12 px-4">
-                <div className="max-w-7xl mx-auto text-center text-gray-400">
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <Smartphone className="h-6 w-6 text-purple-400" />
-                        <span className="text-xl font-bold text-white">ZSleep</span>
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex justify-center gap-8 mb-4">
+                        <a href="/privacy" className="text-gray-400 hover:text-white transition">
+                            Privacy Policy
+                        </a>
                     </div>
-                    <p>© 2025 KaiTeam. All rights reserved.</p>
+                    <p className="text-center text-gray-400">© 2025 KaiTeam. All rights reserved.</p>
                 </div>
             </footer>
         </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Download, Star, Users, Zap, Shield, Smartphone, ChevronRight } from 'lucide-react';
+import { Menu, X, Download, Star, Users, Moon, BarChart3, Headphones, Lock, Smartphone, ChevronRight } from 'lucide-react';
 
-export default function MobileAppLanding() {
+export default function ZSleepLanding() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,21 +16,22 @@ export default function MobileAppLanding() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
             {/* Navigation */}
             <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-lg' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center space-x-2">
-                            <Smartphone className="h-8 w-8 text-purple-400" />
-                            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">ZSleep</span>
+                            <Moon className="h-8 w-8 text-blue-400" />
+                            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">ZSleep</span>
                         </div>
 
                         <div className="hidden md:flex items-center space-x-8">
-                            <a href="#features" className="hover:text-purple-400 transition">Features</a>
-                            <a href="#testimonials" className="hover:text-purple-400 transition">Reviews</a>
-                            <a href="#pricing" className="hover:text-purple-400 transition">Pricing</a>
-                            <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                            <a href="#features" className="hover:text-blue-400 transition">Features</a>
+                            <a href="#benefits" className="hover:text-blue-400 transition">Benefits</a>
+                            <a href="#reviews" className="hover:text-blue-400 transition">Reviews</a>
+                            <a href="#pricing" className="hover:text-blue-400 transition">Pricing</a>
+                            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
                                 Download Now
                             </button>
                         </div>
@@ -44,10 +45,11 @@ export default function MobileAppLanding() {
                 {mobileMenuOpen && (
                     <div className="md:hidden bg-black/90 backdrop-blur-lg">
                         <div className="px-4 py-4 space-y-3">
-                            <a href="#features" className="block hover:text-purple-400 transition">Features</a>
-                            <a href="#testimonials" className="block hover:text-purple-400 transition">Reviews</a>
-                            <a href="#pricing" className="block hover:text-purple-400 transition">Pricing</a>
-                            <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2 rounded-full">
+                            <a href="#features" className="block hover:text-blue-400 transition">Features</a>
+                            <a href="#benefits" className="block hover:text-blue-400 transition">Benefits</a>
+                            <a href="#reviews" className="block hover:text-blue-400 transition">Reviews</a>
+                            <a href="#pricing" className="block hover:text-blue-400 transition">Pricing</a>
+                            <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-2 rounded-full">
                                 Download Now
                             </button>
                         </div>
@@ -61,39 +63,40 @@ export default function MobileAppLanding() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-8 animate-fade-in">
                             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                                Your Perfect
-                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Mobile </span>
-                                Companion
+                                Transform Your
+                                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Sleep </span>
+                                Quality
                             </h1>
                             <p className="text-xl text-gray-300">
-                                Experience the future of mobile productivity. Download now and join over 1 million happy users worldwide.
+                                Track your sleep patterns, meditate to falling asleep peacefully, and wake up refreshed. Join 500K+ users who've improved their sleep with ZSleep.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center justify-center gap-2">
+                                <button className="bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-2">
                                     <Download className="h-5 w-5" />
                                     Download for iOS
                                 </button>
-                                <button className="bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all border border-white/20">
+                                <button className="bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all border border-white/20 flex items-center justify-center gap-2">
+                                    <Download className="h-5 w-5" />
                                     Download for Android
                                 </button>
                             </div>
                             <div className="flex items-center gap-8 pt-4">
                                 <div className="flex items-center gap-2">
                                     <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                                    <span className="text-sm">4.9/5 Rating</span>
+                                    <span className="text-sm">4.8/5 Rating</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Users className="h-5 w-5 text-purple-400" />
-                                    <span className="text-sm">1M+ Users</span>
+                                    <Users className="h-5 w-5 text-blue-400" />
+                                    <span className="text-sm">500K+ Users</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl opacity-20"></div>
-                            <div className="relative bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-20"></div>
+                            <div className="relative bg-gradient-to-br from-blue-800/30 to-cyan-800/30 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
                                 <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-4 h-96 flex items-center justify-center">
-                                    <Smartphone className="h-48 w-48 text-purple-400/50" />
+                                    <Moon className="h-48 w-48 text-blue-400/50" />
                                 </div>
                             </div>
                         </div>
@@ -105,18 +108,18 @@ export default function MobileAppLanding() {
             <section id="features" className="py-20 px-4 bg-black/20">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Powerful Features</h2>
-                        <p className="text-xl text-gray-300">Everything you need in one beautiful app</p>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Powerful Sleep Features</h2>
+                        <p className="text-xl text-gray-300">Everything you need for better sleep</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: Zap, title: "Lightning Fast", desc: "Optimized performance for seamless experience" },
-                            { icon: Shield, title: "Secure & Private", desc: "Your data is protected with end-to-end encryption" },
-                            { icon: Users, title: "Collaborative", desc: "Work together with your team in real-time" }
+                            { icon: BarChart3, title: "Sleep Tracking", desc: "Monitor your sleep patterns, duration, and quality with detailed analytics" },
+                            { icon: Headphones, title: "Guided Meditation", desc: "Curated meditation sessions to help you fall asleep faster and deeper" },
+                            { icon: Lock, title: "Privacy First", desc: "Your sleep data stays private. No tracking, no sharing, 100% encrypted" }
                         ].map((feature, i) => (
-                            <div key={i} className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all hover:scale-105">
-                                <feature.icon className="h-12 w-12 text-purple-400 mb-4" />
+                            <div key={i} className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all hover:scale-105">
+                                <feature.icon className="h-12 w-12 text-blue-400 mb-4" />
                                 <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
                                 <p className="text-gray-300">{feature.desc}</p>
                             </div>
@@ -125,21 +128,45 @@ export default function MobileAppLanding() {
                 </div>
             </section>
 
-            {/* Testimonials */}
-            <section id="testimonials" className="py-20 px-4">
+            {/* Benefits Section */}
+            <section id="benefits" className="py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Loved by Users</h2>
-                        <p className="text-xl text-gray-300">See what our community has to say</p>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Sleep Better, Live Better</h2>
+                        <p className="text-xl text-gray-300">See the real benefits of improved sleep</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {[
+                            { title: "Track Sleep Patterns", desc: "Understand your sleep cycles and identify trends that affect your rest quality" },
+                            { title: "Personalized Insights", desc: "Get AI-powered recommendations based on your sleep data to improve over time" },
+                            { title: "Relaxing Soundscapes", desc: "Choose from nature sounds, rain, ocean waves, and more to drift off peacefully" },
+                            { title: "Wake Up Refreshed", desc: "Smart alarm features wake you during light sleep stages for a better morning" }
+                        ].map((benefit, i) => (
+                            <div key={i} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all">
+                                <h3 className="text-2xl font-bold mb-3 text-blue-400">{benefit.title}</h3>
+                                <p className="text-gray-300">{benefit.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Reviews Section */}
+            <section id="reviews" className="py-20 px-4 bg-black/20">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Loved by Sleep Seekers</h2>
+                        <p className="text-xl text-gray-300">See what users have to say about their sleep transformation</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { name: "Sarah Johnson", role: "Product Designer", text: "This app has transformed how I work. Absolutely incredible!" },
-                            { name: "Mike Chen", role: "Developer", text: "Best mobile app I've used. Clean, fast, and intuitive." },
-                            { name: "Emma Davis", role: "Entrepreneur", text: "Can't imagine my workflow without it anymore. 5 stars!" }
+                            { name: "Alex Martinez", role: "Sleep Tracker", text: "Finally got 8 hours of quality sleep! The meditation sessions are fantastic and the tracking shows real improvements." },
+                            { name: "Jordan Lee", role: "Night Owl", text: "This app helped me understand my sleep patterns. I now sleep better than ever before. Highly recommend!" },
+                            { name: "Casey Williams", role: "Busy Professional", text: "The guided meditation before bed is a game-changer. I fall asleep faster and wake up more refreshed." }
                         ].map((review, i) => (
-                            <div key={i} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                            <div key={i} className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                                 <div className="flex gap-1 mb-4">
                                     {[...Array(5)].map((_, j) => (
                                         <Star key={j} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
@@ -156,12 +183,45 @@ export default function MobileAppLanding() {
                 </div>
             </section>
 
+            {/* Pricing Section */}
+            <section id="pricing" className="py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Simple Pricing</h2>
+                        <p className="text-xl text-gray-300">Start free, upgrade when you're ready</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                        {[
+                            { name: "Free", price: "$0", features: ["Basic sleep tracking", "Limited meditation sessions", "Ad-supported"] },
+                            { name: "Premium", price: "$9.99/mo", features: ["Unlimited sleep tracking", "500+ meditation sessions", "Ad-free experience", "Advanced analytics", "Custom alarms"] }
+                        ].map((plan, i) => (
+                            <div key={i} className={`rounded-2xl p-8 border transition-all ${plan.name === 'Premium' ? 'bg-gradient-to-br from-blue-600 to-cyan-600 border-blue-400 scale-105' : 'bg-white/5 border-white/10'}`}>
+                                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                                <p className="text-3xl font-bold mb-6">{plan.price}</p>
+                                <ul className="space-y-3 mb-8">
+                                    {plan.features.map((feature, j) => (
+                                        <li key={j} className="flex items-center gap-2">
+                                            <ChevronRight className="h-4 w-4 text-blue-400" />
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <button className={`w-full py-3 rounded-full font-semibold transition-all ${plan.name === 'Premium' ? 'bg-white text-blue-600 hover:shadow-2xl' : 'bg-white/10 hover:bg-white/20 border border-white/20'}`}>
+                                    Get Started
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
-            <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
+            <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-cyan-600">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
-                    <p className="text-xl mb-8 text-purple-100">Join millions of users and transform your mobile experience today</p>
-                    <button className="bg-white text-purple-600 px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Sleep Better Tonight?</h2>
+                    <p className="text-xl mb-8 text-blue-100">Join thousands improving their sleep with ZSleep</p>
+                    <button className="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 mx-auto">
                         Download Now
                         <ChevronRight className="h-5 w-5" />
                     </button>
@@ -171,12 +231,24 @@ export default function MobileAppLanding() {
             {/* Footer */}
             <footer className="bg-black/40 py-12 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex justify-center gap-8 mb-4">
-                        <a href="/privacy" className="text-gray-400 hover:text-white transition">
-                            Privacy Policy
-                        </a>
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                        <div className="flex items-center space-x-2">
+                            <Moon className="h-6 w-6 text-blue-400" />
+                            <span className="text-xl font-bold">ZSleep</span>
+                        </div>
+                        <div className="flex justify-center gap-8 flex-wrap">
+                            <a href="/privacy" className="text-gray-400 hover:text-white transition">
+                                Privacy Policy
+                            </a>
+                            <a href="/terms" className="text-gray-400 hover:text-white transition">
+                                Terms of Service
+                            </a>
+                            <a href="/contact" className="text-gray-400 hover:text-white transition">
+                                Contact
+                            </a>
+                        </div>
                     </div>
-                    <p className="text-center text-gray-400">© 2025 KaiTeam. All rights reserved.</p>
+                    <p className="text-center text-gray-400">© 2025 ZSleep. All rights reserved. | Crafted by KaiTeam</p>
                 </div>
             </footer>
         </div>
